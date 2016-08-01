@@ -1,0 +1,77 @@
+"*":
+  "autocomplete-clang": {}
+  core:
+    disabledPackages: [
+      "go-config"
+      "autocomplete-go"
+      "go-get"
+      "platformio-ide"
+      "language-tex"
+      "language-latexsimple"
+    ]
+  editor:
+    backUpBeforeSaving: true
+    invisibles: {}
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "42e44cb0-2607-561b-6c10-e6908f9a0f9a"
+  linter:
+    errorPanelHeight: 115
+  "linter-gcc":
+    execPath: "/usr/local/Cellar/gcc/6.1.0/bin/gcc-6"
+  "linter-python":
+    executablePath: "/usr/local/bin/pylama"
+  "linter-rubocop":
+    command: "/usr/local/bin/rubocop"
+  minimap:
+    absoluteMode: true
+    adjustAbsoluteModeHeight: true
+    plugins:
+      bookmarks: true
+      bookmarksDecorationsZIndex: 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      "minimap-autohide": true
+      "minimap-autohideDecorationsZIndex": 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+  "platformio-ide-terminal":
+    core:
+      autoRunCommand: "export PATH=/Users/yuta/.atom/packages/platformio-ide/penv/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/TeXLive/Library/texlive/2013/bin/x86_64-darwin:/Applications/TeXLive/Library/mactexaddons/bin:/Users/yuta/programfile/Qt/5.6/clang_64/bin:/Users/yuta/programfile/Qt/5.6:/usr/local/bin/python"
+  "terminal-plus":
+    core:
+      mapTerminalsToAutoOpen: true
+    toggles: {}
+  "tool-bar":
+    position: "Left"
+  welcome:
+    showOnStartup: false
+".beamer.latex.tex.text":
+  editor:
+    tabLength: 4
+".bibtex.text":
+  editor:
+    tabLength: 4
+".latex.log.text":
+  editor:
+    tabLength: 4
+".latex.memoir.tex.text":
+  editor:
+    tabLength: 4
+".latex.tex.text":
+  editor:
+    tabLength: 4
+".plain.text":
+  editor:
+    tabLength: 4
+".pro.source":
+  editor:
+    tabLength: 4
+".tex.text":
+  editor:
+    tabLength: 4

@@ -1,0 +1,147 @@
+{
+  "name": "autocomplete-xml",
+  "main": "./lib/main",
+  "version": "0.8.3",
+  "description": "Autocomplete+ provider for XML via XSD",
+  "keywords": [
+    "xml",
+    "xsd",
+    "autocomplete"
+  ],
+  "activationCommands": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pleonex/atom-autocomplete-xml.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "xml2js": "0.4.15",
+    "uuid": "^2.0.1"
+  },
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "getProvider"
+      }
+    }
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "readme": "# Autocomplete XML Atom Package\n\n![Downloads](https://img.shields.io/apm/dm/autocomplete-xml.svg)\n![Version](https://img.shields.io/apm/v/autocomplete-xml.svg)\n![License](https://img.shields.io/apm/l/autocomplete-xml.svg)\n![Dependencies](https://david-dm.org/pleonex/atom-autocomplete-xml.svg)\n\n\nXML tag autocompletion for Atom text editor!\n\n![Demo](https://raw.githubusercontent.com/pleonex/atom-autocomplete-xml/master/demo.gif)\n\n**NOTE:** The autocompletation feature is only available when:\n* The XSD file follows the W3C standard. That is, the XSD root element must contain the attribute: `xmlns:xs=\"http://www.w3.org/2001/XMLSchema\"`.\n* The XML file to autocomplete ask for validation. That is, the root element must contain the attribute: `xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"`.\n\n# Features\n* Read XSD files from HTTP, HTTPS or local URI.\n* Show autocompletation for tags and attributes with documentation if available.\n\n# Code structure\nThe package code is inside the *lib* folder.\n\n* *lib*\n    * **main.coffee**: Main package file. It handles package things like calling the provider and settings.\n    * **provider.coffee**: Detects the type of suggestion needed (e.g.: tag, attribute, ...) and ask for suggestions of that type. It handles everything related with the editor.\n    * **xsd.coffee**: Manage the XSD types. Create suggestions. It handles suggestion creation.\n    * **xsdParser.coffee**: Download and parse a XSD file and build the types. It handles XSD parsing.\n    * **xpath-statusbar-view.coffee**: Show the current XPath in the StatusBar.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/pleonex/atom-autocomplete-xml/issues"
+  },
+  "homepage": "https://github.com/pleonex/atom-autocomplete-xml#readme",
+  "_id": "autocomplete-xml@0.8.3",
+  "_shasum": "5d348c39c1fb8d424bc45083f107dbd110947972",
+  "_resolved": "file:../d-116619-84987-19f20zn/package.tgz",
+  "_from": "../d-116619-84987-19f20zn/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "uuid",
+        "version": "2.0.2",
+        "path": "node_modules/uuid/uuid.js"
+      },
+      {
+        "name": "xml2js",
+        "version": "0.4.15",
+        "path": "node_modules/xml2js/lib/xml2js.js"
+      },
+      {
+        "name": "sax",
+        "version": "1.2.1",
+        "path": "node_modules/xml2js/node_modules/sax/lib/sax.js"
+      },
+      {
+        "name": "xmlbuilder",
+        "version": "8.2.2",
+        "path": "node_modules/xml2js/node_modules/xmlbuilder/lib/index.js"
+      }
+    ],
+    "extensions": {
+      ".coffee": [
+        "lib/main.coffee",
+        "lib/provider.coffee",
+        "lib/xml-utils.coffee",
+        "lib/xpath-statusbar-view.coffee",
+        "lib/xsd.coffee",
+        "lib/xsdParser.coffee"
+      ],
+      ".js": [
+        "node_modules/uuid/benchmark/benchmark.js",
+        "node_modules/uuid/misc/compare.js",
+        "node_modules/uuid/misc/perf.js",
+        "node_modules/uuid/rng-browser.js",
+        "node_modules/uuid/rng.js",
+        "node_modules/uuid/uuid.js",
+        "node_modules/xml2js/lib/bom.js",
+        "node_modules/xml2js/lib/processors.js",
+        "node_modules/xml2js/lib/xml2js.js",
+        "node_modules/xml2js/node_modules/sax/lib/sax.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/Utility.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLAttribute.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLCData.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLComment.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLDTDAttList.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLDTDElement.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLDTDEntity.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLDTDNotation.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLDeclaration.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLDocType.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLDocument.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLDocumentCB.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLElement.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLNode.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLProcessingInstruction.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLRaw.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLStreamWriter.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLStringWriter.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLStringifier.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLText.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/XMLWriterBase.js",
+        "node_modules/xml2js/node_modules/xmlbuilder/lib/index.js"
+      ],
+      ".json": [
+        "node_modules/uuid/benchmark/package.json",
+        "node_modules/uuid/package.json",
+        "node_modules/xml2js/node_modules/sax/package.json",
+        "node_modules/xml2js/node_modules/xmlbuilder/package.json",
+        "node_modules/xml2js/package.json",
+        "package.json"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "lib",
+          ""
+        ],
+        "dependencies": {
+          "xml2js": "0.4.15",
+          "uuid": "^2.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/xml2js/lib",
+          "node_modules/xml2js"
+        ],
+        "dependencies": {
+          "sax": ">=0.6.0",
+          "xmlbuilder": ">=2.4.6"
+        }
+      }
+    ]
+  }
+}
