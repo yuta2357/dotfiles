@@ -6,8 +6,6 @@
       "autocomplete-go"
       "go-get"
       "platformio-ide"
-      "language-tex"
-      "language-latexsimple"
     ]
   editor:
     backUpBeforeSaving: true

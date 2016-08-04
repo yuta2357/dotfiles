@@ -1,0 +1,11 @@
+/Users/yuta/.vimrc
+/Users/yuta/Desktop/3dairimage/tm_lib/TmLDoubleMatrix.h
+/Users/yuta/Desktop/program/C/practice/hello.c
+/Users/yuta/Desktop/B4/EMXP/section3 Refraction and reflection from interfaces/3.2/3_2.tex
+/Users/yuta/Desktop/B4/EMXP/section3 Refraction and reflection from interfaces/3.1/3_1.tex
+/Users/yuta/dotfiles/.vim/rc/dein.toml
+/Users/yuta/Desktop/B4/EMXP/section3 Refraction and reflection from interfaces/3.0/3_0.tex
+/Users/yuta/Desktop/program/python/array.py
+/Users/yuta/.vim/dein/.dein/doc/helphelp.jax
+/Users/yuta/Downloads/closetag.vim
+/Users/yuta/.vim/dein/.dein/doc/syntastic-checkers.txt
