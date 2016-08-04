@@ -18,6 +18,7 @@
     userId: "42e44cb0-2607-561b-6c10-e6908f9a0f9a"
   linter:
     errorPanelHeight: 115
+    showErrorPanel: false
   "linter-gcc":
     execPath: "/usr/local/Cellar/gcc/6.1.0/bin/gcc-6"
   "linter-python":
