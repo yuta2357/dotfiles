@@ -1,3 +1,4 @@
+/Users/yuta/dotfiles/dotfilescommit.sh
 /Users/yuta/.vimrc
 /Users/yuta/Desktop/3dairimage/tm_lib/TmLDoubleMatrix.h
 /Users/yuta/Desktop/program/C/practice/hello.c
