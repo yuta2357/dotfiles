@@ -9,10 +9,10 @@ build = 'make'
 repo = 'vim-jp/vimdoc-ja'
 
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
+repo = 'Shougo/unite.vim'
 
 [[plugins]]
-repo = 'Shougo/unite.vim'
+repo = 'Shougo/neoinclude.vim'
 
 [[plugins]]
 repo = 'Shougo/unite-outline'
@@ -38,11 +38,11 @@ repo = 'itchyny/lightline.vim'
 [[plugins]]
 repo = 'tomasr/molokai'
 
-[[plugins]]
-repo = 'w0ng/vim-hybrid'
+# [[plugins]]
+# repo = 'w0ng/vim-hybrid'
 
-[[plugins]]
-repo = 'nathanaelkane/vim-indent-guides'
+#[[plugins]]
+#repo = 'nathanaelkane/vim-indent-guides'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
@@ -68,3 +68,8 @@ repo = "scrooloose/syntastic"
 [[plugins]]
 repo = 'osyo-manga/vim-watchdogs'
 
+[[plugins]]
+repo = 't9md/vim-quickhl'
+
+[[plugins]]
+repo ='Shougo/neosnippet-snippets'

@@ -1,0 +1,17 @@
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+on_i=1
+
+[[plugins]] # toml syntax
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'justmao945/vim-clang'
+on_ft = ['c','cpp']
+
+[[plugins]]
+repo = 'mattn/habatobi-vim'
+on_cmd =['Habatobi']
+
+
