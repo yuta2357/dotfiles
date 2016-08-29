@@ -1,14 +1,21 @@
-/Users/yuta/Desktop/B4/EMXP/section3 Refraction and reflection from interfaces/3.2/3_2.tex
+/Users/yuta/.bashrc
+/Users/yuta/scriptfile/translate.sh
 /Users/yuta/.vimrc
-/Users/yuta/dotfiles/.vim/rc/dein_lazy.toml
+/Users/yuta/scriptfile/jtoe.sh
 /Users/yuta/dotfiles/.vim/rc/dein.toml
-/Users/yuta/dotfiles/.vim/dein/repos/github.com/justmao945/vim-clang/doc/clang.txt
-/Users/yuta/Desktop/program/C/practice/hello.c
-/Users/yuta/dotfiles/dotfilescommit.sh
-/Users/yuta/Desktop/3dairimage/tm_lib/TmLDoubleMatrix.h
-/Users/yuta/Desktop/B4/EMXP/section3 Refraction and reflection from interfaces/3.1/3_1.tex
-/Users/yuta/Desktop/B4/EMXP/section3 Refraction and reflection from interfaces/3.0/3_0.tex
-/Users/yuta/Desktop/program/python/array.py
-/Users/yuta/.vim/dein/.dein/doc/helphelp.jax
-/Users/yuta/Downloads/closetag.vim
-/Users/yuta/.vim/dein/.dein/doc/syntastic-checkers.txt
+/Users/yuta/Desktop/B4/EMXP/section3/3.5/3_5.tex
+/Users/yuta/Desktop/document/math_q/math2b/指数対数関数/5/指数5.tex
+/Users/yuta/dotfiles/.vim/dict/tex.dict
+/Users/yuta/dotfiles/.vim/dein/repos/github.com/Shougo/neosnippet-snippets/neosnippets/tex.snip
+/Users/yuta/Desktop/program/html/practice/practice5.html
+/Users/yuta/Desktop/program/html/practice/practice4.html
+/Users/yuta/dotfiles/.vim/dein/repos/github.com/Shougo/neosnippet-snippets/neosnippets/html.snip
+/Users/yuta/dotfiles/.vim/dein/repos/github.com/Shougo/neosnippet-snippets/neosnippets/sh.snip
+/Users/yuta/dotfiles/.vim/dein/repos/github.com/Shougo/neosnippet-snippets/neosnippets/vim.snip
+/Users/yuta/dotfiles/.vim/dein/repos/github.com/Shougo/neosnippet-snippets/neosnippets/css.snip
+/Users/yuta/dotfiles/.vim/dict/c.dict
+/Users/yuta/dotfiles/.vim/dein/repos/github.com/Shougo/neosnippet-snippets/neosnippets/c.snip
+/Users/yuta/dotfiles/.vim/dein/repos/github.com/Shougo/neocomplete.vim/plugin/neocomplete/dictionary.vim
+/Users/yuta/dotfiles/.vim/dein/repos/github.com/Shougo/neocomplete.vim/plugin/neocomplete/member.vim
+/Users/yuta/dotfiles/.vim/dein/repos/github.com/Shougo/neocomplete.vim/plugin/neocomplete.vim
+/Users/yuta/octave-workspace

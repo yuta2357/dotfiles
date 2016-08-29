@@ -48,6 +48,7 @@
     toggles: {}
   "tool-bar":
     position: "Left"
+    visible: false
   welcome:
     showOnStartup: false
 ".beamer.latex.tex.text":
