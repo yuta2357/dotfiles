@@ -1,3 +1,5 @@
+/Users/yuta/dotfiles/dotfilescommit.sh
+/Users/yuta/dotfiles/dotfilespull.sh
 /Users/yuta/.bashrc
 /Users/yuta/scriptfile/translate.sh
 /Users/yuta/.vimrc
