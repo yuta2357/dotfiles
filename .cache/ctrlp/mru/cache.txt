@@ -1,10 +1,10 @@
+/Users/yuta/.vimrc
+/Users/yuta/dotfiles/.vim/rc/dein.toml
 /Users/yuta/dotfiles/dotfilescommit.sh
 /Users/yuta/dotfiles/dotfilespull.sh
 /Users/yuta/.bashrc
 /Users/yuta/scriptfile/translate.sh
-/Users/yuta/.vimrc
 /Users/yuta/scriptfile/jtoe.sh
-/Users/yuta/dotfiles/.vim/rc/dein.toml
 /Users/yuta/Desktop/B4/EMXP/section3/3.5/3_5.tex
 /Users/yuta/Desktop/document/math_q/math2b/指数対数関数/5/指数5.tex
 /Users/yuta/dotfiles/.vim/dict/tex.dict
