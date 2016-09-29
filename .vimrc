@@ -14,7 +14,7 @@ syntax on
 colorscheme molokai
 set t_Co=256
 "-------------------
-
+"
 "-----display and search-------
 set number" 行数の表示
 set cursorline" 現在の行の表示
@@ -46,20 +46,29 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 vnoremap <silent> * "vy/\V<C-r>=substitute(escape(@v, '\/'), "\n", '\\n', 'g')<CR><CR>
 set wildmenu
 set wildmode=longest:full,full
+set nowrap
 "---------------------------
 
 "-------------keymap----------
 nnoremap <Space>h ^
 nnoremap <Space>l $
 "スペースh=^ スペースl=$
-nnoremap :: :!
 nnoremap ; :
 nnoremap ;; :!
+nnoremap : ;
+nnoremap @; @:
 nnoremap <Down> gj
 
 nnoremap <Up>   gk
 "nnoremap <Right> gl
 "nnoremap <Left> gh
+nnoremap zj <C-d>
+nnoremap zk <C-u>
+nnoremap zl zL
+nnoremap zL zl
+nnoremap zh zH
+nnoremap zH zh
+
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -84,18 +93,21 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
+inoremap <C-s><C-l> <Esc>$a
+inoremap <C-s><C-h> <Esc>^i
 " insertモードでの移動
-inoremap <C-i><C-i> <BS>
-inoremap <C-b><C-s> <Bslash>
+inoremap <C-i> <BS>
+inoremap <C-s><C-s> <Bslash>
+inoremap <C-s><C-d> ^
 inoremap <A-m> <CR>
 inoremap <C-u> <C-g>u<C-u>
 inoremap jj <Esc>
-inoremap っj jj
+inoremap っj <Esc>
 inoremap <M-j> <Esc>
 "カッコの設定
-" inoremap ( ()<Left>
-" inoremap { {}<Left>
-" inoremap [ []<Left>
+inoremap () ()<Left>
+inoremap {} {}<Left>
+inoremap [] []<Left>
 inoremap "" ""<Left>
 inoremap '' ''<Left>
 inoremap <> <><Left>
@@ -124,9 +136,8 @@ cnoremap <M-b> <S-Left>
 cnoremap <M-f> <S-Right>
 "---------------------------
 
-" ------dict--------
-autocmd FileType tex :set dictionary=~/.vim/dict/tex.dict
-" ------------------
+
+" ------plugin-----
 
 "---------dein----------------
 " プラグインが実際にインストールされるディレクトリ
@@ -184,7 +195,21 @@ let g:neocomplcache_dictionary_filetype_lists = {
 
 inoremap <expr><C-g>     neocomplete#undo_completion()
 inoremap <expr><C-o>     neocomplete#complete_common_string()
+
+let s:neco_dicts_dir = $HOME . '/.vim/dict'
+if isdirectory(s:neco_dicts_dir)
+  let g:neocomplete#sources#dictionary#dictionaries = {
+  \   'tex': s:neco_dicts_dir . '/tex.dict'
+  \ }
+endif
+
+" シンタックスをキャッシュするときの最小文字長
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+" 補完を表示する最小文字数
+let g:neocomplete#auto_completion_start_length = 2
+
 " --------------------
+
 
 "-------Tree-------
 "autocmd vimenter * NERDTree
@@ -274,6 +299,7 @@ nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
 "----------------
 
+" -------myconfig-------
 
 " --------tex config--------
 function! s:tex()
@@ -286,3 +312,42 @@ augroup vimrc-tex
   autocmd FileType tex call s:tex()
 augroup END
 "--------------
+augroup MyXML
+  autocmd!
+  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype eruby inoremap <buffer> </ </<C-x><C-o>
+augroup END
+" --------------
+" ------dict--------
+autocmd FileType tex :set dictionary=~/.vim/dict/tex.txt
+" ------------------
+" ------------
+
+" ------myfunction----
+function! s:DictionaryTranslate(...)
+    let l:word = a:0 == 0 ? expand('<cword>') : a:1
+    call histadd('cmd', 'DictionaryTranslate '  . l:word)
+    if l:word ==# '' | return | endif
+    let l:gene_path = '~/.vim/dict/gene.txt'
+    let l:jpn_to_eng = l:word !~? '^[a-z_]\+$'
+    let l:output_option = l:jpn_to_eng ? '-B 1' : '-A 1' " 和英 or 英和
+
+    silent pedit Translate\ Result | wincmd P | %delete " 前の結果が残っていることがあるため
+    setlocal buftype=nofile noswapfile modifiable
+    silent execute 'read !grep -ihw' l:output_option l:word l:gene_path
+    silent 0delete
+    let l:esc = @z
+    let @z = ''
+    while search("^" . l:word . "$", "Wc") > 0 " 完全一致したものを上部に移動
+        silent execute line('.') - l:jpn_to_eng . "delete Z 2"
+    endwhile
+    silent 0put z
+    let @z = l:esc
+    silent call append(line('.'), '==')
+    silent 1delete
+    silent wincmd p
+endfunction
+command! -nargs=? -complete=command DictionaryTranslate call <SID>DictionaryTranslate(<f-args>)
+" -----------------------
+
